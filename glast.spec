@@ -20,7 +20,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
-%define		_prefix		/usr/X11R6
 
 %description
 GLAsteroids is a 3D clone of the arcade classic 'Asteroids' coded in C
