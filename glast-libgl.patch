@@ -1,0 +1,9 @@
+diff -Nru glast-0.9.orig/Makefile glast-0.9/Makefile
+--- glast-0.9.orig/Makefile	Sun Sep  1 21:36:30 2002
++++ glast-0.9/Makefile	Tue Apr  8 11:49:24 2003
+@@ -1,4 +1,4 @@
+-CC  = gcc -Wall -ansi -O2
++CC  = gcc -Wall -ansi -O2 -I/usr/X11R6/include -L/usr/X11R6/lib
+ BIN = glast
+ 
+ all:
