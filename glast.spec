@@ -1,7 +1,7 @@
 #
 # TODO: move score file(s) to /var/games
 #
-Summary: 	GLAsteroids - 3D clone of the arcade classic
+Summary:	GLAsteroids - 3D clone of the arcade classic
 Summary(pl):	GLAsteroids - klon 3D klasycznej gry
 Name:		glast
 Version:	0.9
