@@ -9,6 +9,7 @@ Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	%{name}-%{version}.tar.gz
+Patch0:		%{name}-libgl.patch
 URL:		http://projectz.ath.cx/?id=90
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2.0
@@ -40,6 +41,7 @@ od zniszczenia.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make}
