@@ -29,7 +29,7 @@ high score table, and fuel drops. You can 'fly' around in outer space
 blowing up chunks of spinning space rock with a high power dual plasma
 cannon until you get smashed to pieces, run out of fuel, or save the
 earth from being pulverized.
- 
+
 %description -l pl
 GLAsteroids to trójwymiarowy klon klasycznej gry "Asteroids" napisany
 w C przy u¿yciu OpenGL i SDL. Ma efekty d¼wiêkowe, systemowe menu,
