@@ -1,6 +1,3 @@
-#
-# TODO: move score file(s) to /var/games
-#
 Summary:	GLAsteroids - 3D clone of the arcade classic
 Summary(pl):	GLAsteroids - klon 3D klasycznej gry
 Name:		glast
@@ -21,6 +18,7 @@ Requires:	SDL_image >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
+%define		_scoredir	/var/games/glast
 
 %description
 GLAsteroids is a 3D clone of the arcade classic 'Asteroids' coded in C
@@ -48,14 +46,14 @@ od zniszczenia.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/{sounds,textures}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/{sounds,textures},%{_scoredir}}
 
 cp %{name} $RPM_BUILD_ROOT%{_datadir}/%{name}/%{name}
 cp sounds/*.wav $RPM_BUILD_ROOT%{_datadir}/%{name}/sounds
 cp textures/*.png $RPM_BUILD_ROOT%{_datadir}/%{name}/textures
 cp textures/*.jpg $RPM_BUILD_ROOT%{_datadir}/%{name}/textures
 
-touch $RPM_BUILD_ROOT%{_datadir}/%{name}/.highscore
+touch $RPM_BUILD_ROOT%{_scoredir}/.highscore
 
 cat > $RPM_BUILD_ROOT%{_bindir}/%{name} <<EOF
 #!/bin/sh
@@ -72,8 +70,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/%{name}
-# MOVE TO /var/games!!!
-%attr(666,root,root) %{_datadir}/%{name}/.highscore
+%dir %{_scoredir}
+%attr(666,root,root) %{_scoredir}/.highscore
 %dir %{_datadir}/%{name}/sounds
 %{_datadir}/%{name}/sounds/*.wav
 %dir %{_datadir}/%{name}/textures
