@@ -4,12 +4,12 @@
 Summary:	GLAsteroids - 3D clone of the arcade classic
 Summary(pl):	GLAsteroids - klon 3D klasycznej gry
 Name:		glast
-Version:	0.9
+Version:	0.91
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://projectz.org/files/%{name}-%{version}.tar.gz
-# Source0-md5:	e55eddc69ff5925ea710c2208a1e57bc
+# Source0-md5:	4396d28150067a527b6cf6abcc8df21e
 Patch0:		%{name}-libgl.patch
 URL:		http://projectz.ath.cx/?id=90
 BuildRequires:	OpenGL-devel
