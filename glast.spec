@@ -8,7 +8,7 @@ Version:	0.9
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://projectz.org/files/%{name}-%{version}.tar.gz
 # Source0-md5:	e55eddc69ff5925ea710c2208a1e57bc
 Patch0:		%{name}-libgl.patch
 URL:		http://projectz.ath.cx/?id=90
@@ -21,7 +21,6 @@ Requires:	SDL_image >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
-
 
 %description
 GLAsteroids is a 3D clone of the arcade classic 'Asteroids' coded in C
@@ -49,19 +48,16 @@ od zniszczenia.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/{sounds,textures}}
 
-install -d $RPM_BUILD_ROOT/%{_bindir}
-install -d $RPM_BUILD_ROOT/%{_datadir}/%{name}
-install -d $RPM_BUILD_ROOT/%{_datadir}/%{name}/{sounds,textures}
+cp %{name} $RPM_BUILD_ROOT%{_datadir}/%{name}/%{name}
+cp sounds/*.wav $RPM_BUILD_ROOT%{_datadir}/%{name}/sounds
+cp textures/*.png $RPM_BUILD_ROOT%{_datadir}/%{name}/textures
+cp textures/*.jpg $RPM_BUILD_ROOT%{_datadir}/%{name}/textures
 
-cp %{name} $RPM_BUILD_ROOT/%{_datadir}/%{name}/%{name}
-cp sounds/*.wav $RPM_BUILD_ROOT/%{_datadir}/%{name}/sounds
-cp textures/*.png $RPM_BUILD_ROOT/%{_datadir}/%{name}/textures
-cp textures/*.jpg $RPM_BUILD_ROOT/%{_datadir}/%{name}/textures
+touch $RPM_BUILD_ROOT%{_datadir}/%{name}/.highscore
 
-touch $RPM_BUILD_ROOT/%{_datadir}/%{name}/.highscore
-
-cat > $RPM_BUILD_ROOT/%{_bindir}/%{name} <<EOF
+cat > $RPM_BUILD_ROOT%{_bindir}/%{name} <<EOF
 #!/bin/sh
 cd %{_datadir}/%{name}
 ./%{name} \$@
