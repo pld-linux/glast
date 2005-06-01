@@ -12,6 +12,7 @@ URL:		http://projectz.ath.cx/?id=90
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_image-devel >= 1.2.0
+BuildRequires:	SDL_mixer-devel >= 1.2.0
 Requires:	OpenGL
 Requires:	SDL >= 1.2.0
 Requires:	SDL_image >= 1.2.0
