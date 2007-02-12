@@ -1,5 +1,5 @@
 Summary:	GLAsteroids - 3D clone of the arcade classic
-Summary(pl):	GLAsteroids - klon 3D klasycznej gry
+Summary(pl.UTF-8):   GLAsteroids - klon 3D klasycznej gry
 Name:		glast
 Version:	0.91
 Release:	1
@@ -29,13 +29,13 @@ blowing up chunks of spinning space rock with a high power dual plasma
 cannon until you get smashed to pieces, run out of fuel, or save the
 earth from being pulverized.
 
-%description -l pl
-GLAsteroids to trójwymiarowy klon klasycznej gry "Asteroids" napisany
-w C przy u¿yciu OpenGL i SDL. Ma efekty d¼wiêkowe, systemowe menu,
-tablicê rekordów i zrzuty paliwa. Gracz mo¿e lataæ w przestrzeni
-kosmicznej rozbijaj±c fragmenty obracaj±cych siê cia³ kosmicznych przy
-pomocy du¿ej mocy karabinu plazmowego, dopóki nie zostanie
-roztrzaskany na kawa³ki, nie skoñczy siê paliwo, lub nie ocali Ziemi
+%description -l pl.UTF-8
+GLAsteroids to trÃ³jwymiarowy klon klasycznej gry "Asteroids" napisany
+w C przy uÅ¼yciu OpenGL i SDL. Ma efekty dÅºwiÄ™kowe, systemowe menu,
+tablicÄ™ rekordÃ³w i zrzuty paliwa. Gracz moÅ¼e lataÄ‡ w przestrzeni
+kosmicznej rozbijajÄ…c fragmenty obracajÄ…cych siÄ™ ciaÅ‚ kosmicznych przy
+pomocy duÅ¼ej mocy karabinu plazmowego, dopÃ³ki nie zostanie
+roztrzaskany na kawaÅ‚ki, nie skoÅ„czy siÄ™ paliwo, lub nie ocali Ziemi
 od zniszczenia.
 
 %prep
