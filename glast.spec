@@ -1,5 +1,5 @@
 Summary:	GLAsteroids - 3D clone of the arcade classic
-Summary(pl.UTF-8):   GLAsteroids - klon 3D klasycznej gry
+Summary(pl.UTF-8):	GLAsteroids - klon 3D klasycznej gry
 Name:		glast
 Version:	0.91
 Release:	1
